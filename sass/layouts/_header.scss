@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 0 4px rgba(0, 0, 0, 0.15);
+
+  &__logo {
+    padding: $spacing * 2 $spacing;
+    width: 197px;
+  }
+
+  &__link {
+    color: $dark-grey;
+  }
+
+  &__icon {
+    font-size: 24px;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &.header__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: $spacing * 2 $spacing * 3;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    &__logo {
+      width: 200px;
+      margin: $spacing * 3 0px $spacing * 2 0px;
+    }
+
+    &__wrapper {
+      width: 100%;
+    }
+
+    &.header__menu {
+      margin: $spacing * 2 $spacing * 9;
+    }
+  }
+}

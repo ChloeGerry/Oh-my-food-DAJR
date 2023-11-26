@@ -1,0 +1,50 @@
+.button {
+  display: flex;
+  align-self: center;
+  border-radius: 40px;
+  font-weight: 500;
+  color: $white;
+  background-image: linear-gradient(
+    to bottom,
+    $color-secondary,
+    $color-primary
+  );
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  padding: $spacing * 2 $spacing * 3;
+  border: 0px;
+  cursor: pointer;
+  transition: opacity 250ms;
+
+  &.button__order {
+    margin: $spacing * 7 0px;
+  }
+
+  &__link {
+    margin: 0px;
+  }
+
+  &:hover {
+    opacity: 0.9;
+    box-shadow: 3px 12px 10px $shadow-color;
+  }
+
+  &__link:link {
+    text-decoration: none;
+    color: $white;
+  }
+
+  &__link:active {
+    color: $white;
+  }
+
+  &__link:visited {
+    color: $white;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    margin: $spacing * 4 0px $spacing * 7 0px;
+  }
+}

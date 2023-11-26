@@ -1,0 +1,60 @@
+.footer {
+  background-color: $dark-grey;
+  padding: $spacing * 3;
+
+  &__logo {
+    margin: 0px 0px $spacing * 2 0px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__link {
+    color: $white;
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__link:link {
+    text-decoration: none;
+  }
+
+  &__icon {
+    margin: 0px $spacing 0px 0px;
+    color: $white;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: $spacing * 6 $spacing * 10 $spacing * 5 $spacing * 4;
+
+    &__wrapper {
+      display: flex;
+    }
+
+    &__textWrapper {
+      margin-right: $spacing * 5;
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .footer {
+    &__logo {
+      margin: 0px 0px 0px $spacing * 4;
+    }
+  }
+}
