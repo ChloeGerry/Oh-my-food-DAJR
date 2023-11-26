@@ -1,7 +1,6 @@
 .header {
   display: flex;
   justify-content: center;
-  box-shadow: 0 2px 0 4px rgba(0, 0, 0, 0.15);
 }
 .header__logo {
   padding: 16px 8px;
@@ -28,7 +27,7 @@
 @media screen and (min-width: 768px) {
   .header__logo {
     width: 200px;
-    margin: 24px 0px 16px 0px;
+    padding: 24px 0px;
   }
   .header__wrapper {
     width: 100%;
@@ -72,11 +71,6 @@
   color: #ffffff;
 }
 
-@media screen and (min-width: 768px) {
-  .button {
-    margin: 32px 0px 56px 0px;
-  }
-}
 @keyframes like__icon--solid {
   0% {
     background: linear-gradient(#9356dc, #ff79da);
@@ -176,8 +170,32 @@
     margin: 0px 0px 0px 32px;
   }
 }
+@keyframes homePageAnimation {
+  0% {
+    opacity: 0.1;
+    visibility: initial;
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+.progress {
+  width: 50%;
+  position: fixed;
+  top: 47.5%;
+  left: 25%;
+  height: 5%;
+  border-radius: 25px;
+  transform-origin: top left;
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  animation: homePageAnimation 3000ms ease-in-out 150ms both;
+  visibility: hidden;
+}
+
 .fullContent {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1440px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -206,6 +224,7 @@
   color: #353535;
   gap: 16px;
   padding: 16px 8px;
+  box-shadow: 0 -2px 4px 0 #d2d2d2;
 }
 .location__icon {
   display: flex;
@@ -298,11 +317,10 @@
   display: flex;
   align-items: center;
   gap: 24px;
-  padding: 16px 24px;
+  padding: 24px;
   border-radius: 20px;
-  background-color: #f6f6f6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  transition: background 400ms;
+  background: #f6f6f6;
 }
 .operation__Icon {
   font-size: 20px;
@@ -315,9 +333,10 @@
   display: flex;
   align-items: center;
 }
-.operation__text {
+.operation__txt {
   font-weight: 500;
   font-size: 16px;
+  margin: 0;
 }
 
 .restaurants {
@@ -396,45 +415,78 @@
 }
 
 @media screen and (min-width: 768px) {
+  .presentation {
+    padding: 24px 0;
+  }
   .presentation__title {
     font-size: 40px;
-    margin: 16px 0px;
   }
   .presentation__text {
-    margin: 0px;
+    margin: 16px 0;
   }
   .operation {
-    padding: 0px 0px 0px 80px;
+    padding: 56px 32px;
   }
   .operation__navigation {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 24px 0 0 0;
+    gap: 32px;
   }
   .operation__navigationWrapper {
-    margin: 0px 32px 40px 0px;
+    flex-wrap: wrap;
   }
   .restaurants {
-    padding: 0px 40px 80px 40px;
-  }
-  .restaurants__title {
-    padding: 48px 0px 0px 40px;
+    padding: 32px 56px 32px 56px;
   }
   .restaurants__wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
   }
   .restaurants__picture {
-    width: 300px;
     height: 175px;
   }
-  .restaurants__picture--PaletteduGout, .restaurants__picture--NoteEnchantee, .restaurants__picture--AlaFrancaise, .restaurants__picture--DelicedesSens {
-    background-position: 0%;
-  }
   .restaurants__card {
-    margin-bottom: 0px;
+    width: calc(45% - 12px);
+  }
+  .footer {
+    padding: 56px 80px 32px 32px;
+    align-items: flex-start;
+  }
+  .footer__wrapper {
+    flex-direction: row;
+    gap: 32px;
+  }
+  .footer__logo {
+    margin: 0 0 0 88px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .operation {
+    padding: 32px 80px;
+  }
+  .operation__title {
+    text-align: left;
+  }
+  .operation__navigation {
+    justify-content: space-between;
+  }
+  .restaurants {
+    padding: 32px 100px;
+  }
+}
+@media screen and (min-width: 1070px) {
+  .operation {
+    padding: 32px 100px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .operation__navigationWrapper {
+    width: calc(33% - 70px);
   }
 }
 

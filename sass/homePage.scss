@@ -1,5 +1,6 @@
 .fullContent {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1440px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -29,6 +30,7 @@
   color: $dark-grey;
   gap: $spacing * 2;
   padding: $spacing * 2 $spacing;
+  box-shadow: 0 -2px 4px 0 $shadow-color;
 
   &__icon {
     display: flex;
@@ -135,11 +137,10 @@
     display: flex;
     align-items: center;
     gap: 24px;
-    padding: $spacing * 2 $spacing * 3;
+    padding: $spacing * 3;
     border-radius: 20px;
-    background-color: $card-color;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    transition: background 400ms;
+    background: #f6f6f6;
   }
 
   &__Icon {
@@ -154,9 +155,10 @@
     }
   }
 
-  &__text {
+  &__txt {
     font-weight: 500;
     font-size: 16px;
+    margin: 0;
   }
 }
 
@@ -249,58 +251,100 @@
 
 @media screen and (min-width: 768px) {
   .presentation {
+    padding: $spacing * 3 0;
+
     &__title {
       font-size: 40px;
-      margin: $spacing * 2 0px;
     }
 
     &__text {
-      margin: 0px;
+      margin: $spacing * 2 0;
     }
   }
 
   .operation {
-    padding: 0px 0px 0px $spacing * 10;
+    padding: $spacing * 7 $spacing * 4;
+
+    &__title {
+      //   padding-left: 78px;
+    }
 
     &__navigation {
       flex-direction: row;
       justify-content: center;
       flex-wrap: wrap;
+      margin: $spacing * 3 0 0 0;
+      gap: $spacing * 4;
     }
 
     &__navigationWrapper {
-      margin: 0px $spacing * 4 $spacing * 5 0px;
+      flex-wrap: wrap;
     }
   }
 
   .restaurants {
-    padding: 0px $spacing * 5 $spacing * 10 $spacing * 5;
-
-    &__title {
-      padding: $spacing * 6 0px 0px $spacing * 5;
-    }
+    padding: $spacing * 4 $spacing * 7 $spacing * 4 $spacing * 7;
 
     &__wrapper {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      flex-direction: row;
       flex-wrap: wrap;
       gap: $spacing * 3;
     }
 
     &__picture {
-      width: 300px;
       height: 175px;
     }
 
-    &__picture--PaletteduGout,
-    &__picture--NoteEnchantee,
-    &__picture--AlaFrancaise,
-    &__picture--DelicedesSens {
-      background-position: 0%;
+    &__card {
+      width: calc(45% - 12px);
+    }
+  }
+
+  .footer {
+    padding: $spacing * 7 $spacing * 10 $spacing * 4 $spacing * 4;
+    align-items: flex-start;
+
+    &__wrapper {
+      flex-direction: row;
+      gap: $spacing * 4;
     }
 
-    &__card {
-      margin-bottom: 0px;
+    &__logo {
+      margin: 0 0 0 $spacing * 11;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .operation {
+    padding: $spacing * 4 80px;
+
+    &__title {
+      text-align: left;
+    }
+
+    &__navigation {
+      justify-content: space-between;
+    }
+  }
+
+  .restaurants {
+    padding: $spacing * 4 100px;
+  }
+}
+
+@media screen and (min-width: 1070px) {
+  .operation {
+    padding: $spacing * 4 100px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .operation {
+    &__navigationWrapper {
+      width: calc(33% - 70px);
     }
   }
 }

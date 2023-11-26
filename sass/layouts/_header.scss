@@ -1,7 +1,6 @@
 .header {
   display: flex;
   justify-content: center;
-  box-shadow: 0 2px 0 4px rgba(0, 0, 0, 0.15);
 
   &__logo {
     padding: $spacing * 2 $spacing;
@@ -34,7 +33,7 @@
   .header {
     &__logo {
       width: 200px;
-      margin: $spacing * 3 0px $spacing * 2 0px;
+      padding: $spacing * 3 0px;
     }
 
     &__wrapper {
