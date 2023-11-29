@@ -1,4 +1,4 @@
-.fullContent {
+.full-content {
   margin: 0 auto;
   max-width: 1440px;
   font-family: "Roboto", sans-serif;
@@ -15,15 +15,14 @@
   }
 }
 
-.hiddenPage {
+.hidden-page {
   animation: hidding-homePage 0ms 3150ms both;
 }
 
-.location {
+.search {
   justify-content: center;
   display: flex;
   align-items: center;
-  width: 100%;
   background-color: $light-grey;
   font-size: 16px;
   font-weight: 500;
@@ -64,7 +63,7 @@
     margin: 0;
   }
 
-  &__text {
+  &__description {
     font-size: 18px;
     font-weight: 300;
     color: $dark-grey;
@@ -73,7 +72,7 @@
   }
 }
 
-.operation {
+.functioning {
   padding: $spacing * 6 $spacing * 3 $spacing * 8 $spacing * 3;
 
   &__title {
@@ -90,12 +89,12 @@
     gap: 24px;
   }
 
-  &__navigationWrapper {
+  &__navigation-wrapper {
     display: flex;
     align-items: center;
   }
 
-  &__numberIcon {
+  &__number-icon {
     position: absolute;
     z-index: 1;
     background: $color-primary;
@@ -115,7 +114,7 @@
     width: 100%;
   }
 
-  &__link:hover &__Icon {
+  &__link:hover &__navigation-card-icon {
     color: $color-primary;
     opacity: 1;
   }
@@ -133,7 +132,7 @@
     color: $black;
   }
 
-  &__navigationCard {
+  &__navigation-card {
     display: flex;
     align-items: center;
     gap: 24px;
@@ -143,7 +142,7 @@
     background: #f6f6f6;
   }
 
-  &__Icon {
+  &__navigation-card-icon {
     font-size: 20px;
     opacity: 0.5;
     height: 20px;
@@ -155,7 +154,7 @@
     }
   }
 
-  &__txt {
+  &__navigation-card-text {
     font-weight: 500;
     font-size: 16px;
     margin: 0;
@@ -232,7 +231,7 @@
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   }
 
-  &__legendWrapper {
+  &__legend-wrapper {
     color: $black;
   }
 
@@ -257,17 +256,13 @@
       font-size: 40px;
     }
 
-    &__text {
+    &__description {
       margin: $spacing * 2 0;
     }
   }
 
-  .operation {
+  .functioning {
     padding: $spacing * 7 $spacing * 4;
-
-    &__title {
-      //   padding-left: 78px;
-    }
 
     &__navigation {
       flex-direction: row;
@@ -277,7 +272,7 @@
       gap: $spacing * 4;
     }
 
-    &__navigationWrapper {
+    &__navigation-wrapper {
       flex-wrap: wrap;
     }
   }
@@ -301,24 +296,10 @@
       width: calc(45% - 12px);
     }
   }
-
-  .footer {
-    padding: $spacing * 7 $spacing * 10 $spacing * 4 $spacing * 4;
-    align-items: flex-start;
-
-    &__wrapper {
-      flex-direction: row;
-      gap: $spacing * 4;
-    }
-
-    &__logo {
-      margin: 0 0 0 $spacing * 11;
-    }
-  }
 }
 
 @media screen and (min-width: 1024px) {
-  .operation {
+  .functioning {
     padding: $spacing * 4 80px;
 
     &__title {
@@ -336,14 +317,14 @@
 }
 
 @media screen and (min-width: 1070px) {
-  .operation {
+  .functioning {
     padding: $spacing * 4 100px;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .operation {
-    &__navigationWrapper {
+  .functioning {
+    &__navigation-wrapper {
       width: calc(33% - 70px);
     }
   }

@@ -6,6 +6,13 @@
   &__logo {
     width: 197px;
   }
+}
+
+.header-restaurant {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: $spacing * 2;
 
   &__link {
     color: $dark-grey;
@@ -20,13 +27,6 @@
     display: flex;
     justify-content: center;
   }
-
-  &.header__menu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: $spacing * 2;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -34,13 +34,13 @@
     &__logo {
       width: 200px;
     }
+  }
+
+  .header-restaurant {
+    padding: $spacing * 4 $spacing * 9 $spacing * 4 $spacing * 2;
 
     &__wrapper {
       width: 100%;
-    }
-
-    &.header__menu {
-      padding: $spacing * 4 $spacing * 9 $spacing * 4 $spacing * 2;
     }
   }
 }

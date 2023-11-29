@@ -38,15 +38,17 @@
   .footer {
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
+    align-items: flex-start;
     padding: $spacing * 6 $spacing * 10 $spacing * 5 $spacing * 4;
 
     &__wrapper {
       display: flex;
+      flex-direction: row;
+      gap: $spacing * 4;
     }
 
-    &__textWrapper {
-      margin-right: $spacing * 5;
+    &__logo {
+      margin: 0 0 0 $spacing * 11;
     }
   }
 }

@@ -1,4 +1,4 @@
-@keyframes homePageAnimation {
+@keyframes home-page-animation {
   0% {
     opacity: 0.1;
     visibility: initial;
@@ -10,7 +10,7 @@
   }
 }
 
-.progress {
+.progress-bar {
   width: 50%;
   position: fixed;
   top: 47.5%;
@@ -23,6 +23,6 @@
     $color-secondary,
     $color-primary
   );
-  animation: homePageAnimation 3000ms ease-in-out 150ms both;
+  animation: home-page-animation 3000ms ease-in-out 150ms both;
   visibility: hidden;
 }

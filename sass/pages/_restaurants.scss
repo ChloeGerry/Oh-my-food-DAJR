@@ -90,7 +90,7 @@
     margin: 0;
   }
 
-  &__iconWrapper {
+  &__icon-wrapper {
     display: none;
   }
 
@@ -112,7 +112,7 @@
     }
   }
 
-  &__choice:hover &__iconWrapper {
+  &__choice:hover &__icon-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,7 +150,7 @@
     color: $black;
   }
 
-  &__nameWrapper {
+  &__name-wrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -165,7 +165,7 @@
     margin: 0px 0px $spacing 0px;
   }
 
-  &__detailWrapper {
+  &__detail-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -224,7 +224,7 @@
       justify-content: center;
     }
 
-    &__nameWrapper {
+    &__name-wrapper {
       padding: $spacing * 2;
     }
 
