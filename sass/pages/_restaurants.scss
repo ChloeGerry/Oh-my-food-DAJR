@@ -1,0 +1,250 @@
+.main {
+  &__picture {
+    width: 100%;
+    height: 375px;
+    object-fit: cover;
+  }
+}
+
+.section {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: $card-color;
+    border: 1px solid $card-color;
+    border-radius: 40px 40px 0px 0px;
+    margin-top: -$spacing * 10;
+    padding: $spacing * 4 $spacing * 2 $spacing * 5 $spacing * 2;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 $spacing * 3 0 0;
+  }
+
+  &__title {
+    font-family: "Shrikhand", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+    margin: 0px;
+  }
+
+  &__button {
+    padding: $spacing * 2 $spacing * 6;
+    margin: $spacing * 4 0px $spacing * 10 0px;
+    text-decoration: none;
+  }
+}
+
+@keyframes menu {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes orderButton {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+    transition: transform 150ms ease-in-out;
+  }
+
+  100% {
+    transform: rotate(-180deg);
+    transition: transform 150ms ease-in-out;
+  }
+}
+
+.menu {
+  margin-top: $spacing * 5;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 300;
+    border-bottom: 3px solid $color-tertiary;
+    padding-bottom: $spacing;
+    width: 9%;
+    margin: 0;
+  }
+
+  &__iconWrapper {
+    display: none;
+  }
+
+  &__icon {
+    display: none;
+  }
+
+  &__choice {
+    border-radius: 20px;
+    background: $white;
+    margin-top: $spacing * 2;
+    box-shadow: 5px 5px 20px $shadow-color;
+    animation: menu 350ms backwards;
+    overflow-x: hidden;
+    @for $i from 1 through 4 {
+      &--#{$i} {
+        animation-delay: 150ms * $i;
+      }
+    }
+  }
+
+  &__choice:hover &__iconWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid $color-tertiary;
+    background: $color-tertiary;
+    padding: $spacing * 5 $spacing * 4;
+    border-radius: 0px 20px 20px 0px;
+    width: fit-content;
+    animation: orderButton 250ms ease-in-out;
+  }
+
+  &__choice:hover &__icon {
+    position: absolute;
+    background: $white;
+    border-radius: 50%;
+    border: 6px solid $white;
+    width: 12px;
+    color: $color-tertiary;
+    font-size: 12px;
+    animation: rotation 175ms 100ms;
+  }
+
+  &__link {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__link:link {
+    text-decoration: none;
+    color: $black;
+  }
+
+  &__link:visited {
+    color: $black;
+  }
+
+  &__nameWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: $spacing * 2;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0px 0px $spacing 0px;
+  }
+
+  &__detailWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__detail {
+    margin: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  &__price {
+    margin: 0px;
+    font-weight: 700;
+    font-size: 15px;
+    color: $dark-grey;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    &__picture {
+      height: 380px;
+    }
+  }
+
+  .section {
+    &__wrapper {
+      margin: -$spacing * 6 $spacing * 10 0px $spacing * 10;
+      padding: $spacing * 6 150px $spacing * 6 150px;
+    }
+
+    &__header {
+      justify-content: center;
+      gap: $spacing * 3;
+      margin: 0;
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: $spacing * 5;
+
+    &__title {
+      width: 5%;
+    }
+
+    &__choice {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__nameWrapper {
+      padding: $spacing * 2;
+    }
+
+    &__name,
+    &__detail {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    &__wrapper {
+      margin: -$spacing * 6 192px 0px 192px;
+    }
+  }
+
+  .menu {
+    padding: 0px 150px;
+  }
+}

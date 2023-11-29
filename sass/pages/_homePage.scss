@@ -1,0 +1,350 @@
+.fullContent {
+  margin: 0 auto;
+  max-width: 1440px;
+  font-family: "Roboto", sans-serif;
+}
+
+@keyframes hidding-homePage {
+  0% {
+    transform: translateX(-9999px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hiddenPage {
+  animation: hidding-homePage 0ms 3150ms both;
+}
+
+.location {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: $light-grey;
+  font-size: 16px;
+  font-weight: 500;
+  color: $dark-grey;
+  gap: $spacing * 2;
+  padding: $spacing * 2 $spacing;
+  box-shadow: 0 -2px 4px 0 $shadow-color;
+
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    border: none;
+    background-color: $light-grey;
+    padding: 0;
+  }
+
+  ::placeholder {
+    color: $dark-grey;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: linear-gradient(to bottom, $white 80%, $light-grey);
+  padding: $spacing * 5 $spacing * 4 $spacing * 7 $spacing * 4;
+
+  &__title {
+    font-size: $title-size;
+    font-weight: 700;
+    overflow-wrap: break-word;
+    margin: 0;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 300;
+    color: $dark-grey;
+    overflow-wrap: break-word;
+    margin: $spacing * 2 0 $spacing * 3 0;
+  }
+}
+
+.operation {
+  padding: $spacing * 6 $spacing * 3 $spacing * 8 $spacing * 3;
+
+  &__title {
+    font-size: $title-size;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: $spacing * 3 0 0 $spacing + 2;
+    gap: 24px;
+  }
+
+  &__navigationWrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__numberIcon {
+    position: absolute;
+    z-index: 1;
+    background: $color-primary;
+    border-radius: 50%;
+    border: 6px solid $color-primary;
+    width: 12px;
+    color: $white;
+    font-size: 12px;
+    margin: -10px;
+    &::before {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    width: 100%;
+  }
+
+  &__link:hover &__Icon {
+    color: $color-primary;
+    opacity: 1;
+  }
+
+  &__link:link {
+    text-decoration: none;
+    color: $black;
+  }
+
+  &__link:active {
+    color: $black;
+  }
+
+  &__link:visited {
+    color: $black;
+  }
+
+  &__navigationCard {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: $spacing * 3;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    background: #f6f6f6;
+  }
+
+  &__Icon {
+    font-size: 20px;
+    opacity: 0.5;
+    height: 20px;
+    width: 13px;
+    padding-left: $spacing * 2;
+    &::before {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__txt {
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.restaurants {
+  background-color: $card-color;
+  padding: $spacing * 7 $spacing * 3 $spacing * 8 $spacing * 3;
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link:link {
+    color: $black;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: $title-size;
+    font-weight: 700;
+    margin: 0px 0px $spacing * 3 0px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing * 2;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__picture-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  &__picture {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+  }
+
+  &__new {
+    border: 1px solid $color-tertiary;
+    border-radius: 3px;
+    color: $color-tertiaryDarker;
+    background-color: $color-tertiary;
+    padding: $spacing $spacing * 2;
+    font-weight: 500;
+    font-size: 14px;
+    position: absolute;
+    margin: $spacing * 2 $spacing * 2 0 0;
+  }
+
+  &__legend {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $white;
+    border-radius: 0px 0px 20px 20px;
+    border-top: none;
+    background: $white;
+    padding: $spacing * 2 $spacing * 2 $spacing * 2;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  &__legendWrapper {
+    color: $black;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0px 0px $spacing 0px;
+  }
+
+  &__district {
+    margin: 0px;
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .presentation {
+    padding: $spacing * 3 0;
+
+    &__title {
+      font-size: 40px;
+    }
+
+    &__text {
+      margin: $spacing * 2 0;
+    }
+  }
+
+  .operation {
+    padding: $spacing * 7 $spacing * 4;
+
+    &__title {
+      //   padding-left: 78px;
+    }
+
+    &__navigation {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: $spacing * 3 0 0 0;
+      gap: $spacing * 4;
+    }
+
+    &__navigationWrapper {
+      flex-wrap: wrap;
+    }
+  }
+
+  .restaurants {
+    padding: $spacing * 4 $spacing * 7 $spacing * 4 $spacing * 7;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: $spacing * 3;
+    }
+
+    &__picture {
+      height: 175px;
+    }
+
+    &__card {
+      width: calc(45% - 12px);
+    }
+  }
+
+  .footer {
+    padding: $spacing * 7 $spacing * 10 $spacing * 4 $spacing * 4;
+    align-items: flex-start;
+
+    &__wrapper {
+      flex-direction: row;
+      gap: $spacing * 4;
+    }
+
+    &__logo {
+      margin: 0 0 0 $spacing * 11;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .operation {
+    padding: $spacing * 4 80px;
+
+    &__title {
+      text-align: left;
+    }
+
+    &__navigation {
+      justify-content: space-between;
+    }
+  }
+
+  .restaurants {
+    padding: $spacing * 4 100px;
+  }
+}
+
+@media screen and (min-width: 1070px) {
+  .operation {
+    padding: $spacing * 4 100px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .operation {
+    &__navigationWrapper {
+      width: calc(33% - 70px);
+    }
+  }
+}
