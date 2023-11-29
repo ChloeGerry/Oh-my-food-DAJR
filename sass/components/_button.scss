@@ -17,7 +17,8 @@
   transition: opacity 250ms;
 
   &.button__order {
-    margin: $spacing * 7 0px;
+    margin: $spacing * 5 0 0 0;
+    padding: $spacing * 2 $spacing * 6;
   }
 
   &__link {

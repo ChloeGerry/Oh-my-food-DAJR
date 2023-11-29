@@ -1,9 +1,9 @@
 .header {
   display: flex;
   justify-content: center;
+  padding: $spacing * 2 $spacing;
 
   &__logo {
-    padding: $spacing * 2 $spacing;
     width: 197px;
   }
 
@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: $spacing * 2 $spacing * 3;
+    padding: $spacing * 2;
   }
 }
 
@@ -33,7 +33,6 @@
   .header {
     &__logo {
       width: 200px;
-      padding: $spacing * 3 0px;
     }
 
     &__wrapper {
@@ -41,7 +40,7 @@
     }
 
     &.header__menu {
-      margin: $spacing * 2 $spacing * 9;
+      padding: $spacing * 4 $spacing * 9 $spacing * 4 $spacing * 2;
     }
   }
 }
