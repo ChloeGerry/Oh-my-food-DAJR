@@ -72,54 +72,38 @@
   color: #ffffff;
 }
 
-@keyframes like__icon--solid {
-  0% {
-    background: linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-  50% {
-    background: linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-  100% {
-    background: linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-}
 .like {
-  border: none;
-  background: none;
-  cursor: pointer;
   position: relative;
-  padding-right: 24px;
+  border: none;
+  cursor: pointer;
+  background: none;
 }
 .like__icon {
   font-size: 24px;
-  color: #000000;
 }
 .like:link {
   text-decoration: none;
 }
 .like__icon--solid {
   position: absolute;
-  z-index: -1;
+  color: #9356dc;
+  transform: scale(0);
+  transition: 250ms ease-in-out;
 }
 .like__icon--regular {
-  position: absolute;
-  z-index: 1;
+  position: relative;
+  color: #000000;
+  transition: 150ms ease-in-out;
 }
 .like:hover .like__icon--solid {
-  z-index: 1;
   background: linear-gradient(#9356dc, #ff79da);
+  transform: scale(1);
   -webkit-background-clip: text;
-  color: transparent;
-  animation: like__icon--solid 2s ease-out forwards;
+  -webkit-text-fill-color: transparent;
 }
 .like:hover .like__icon--regular {
-  z-index: -1;
+  opacity: 0;
+  transition: 250ms ease-in-out;
 }
 
 .footer {
@@ -679,8 +663,7 @@
   .menu__name-wrapper {
     padding: 16px;
   }
-  .menu__name,
-  .menu__detail {
+  .menu__name, .menu__detail {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

@@ -1,33 +1,11 @@
-@keyframes like__icon--solid {
-  0% {
-    background: linear-gradient($color-primary, $color-secondary);
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-
-  50% {
-    background: linear-gradient($color-primary, $color-secondary);
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-
-  100% {
-    background: linear-gradient($color-primary, $color-secondary);
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-}
-
 .like {
-  border: none;
-  background: none;
-  cursor: pointer;
   position: relative;
-  padding-right: $spacing * 3;
+  border: none;
+  cursor: pointer;
+  background: none;
 
   &__icon {
     font-size: 24px;
-    color: $black;
   }
 
   &:link {
@@ -36,23 +14,26 @@
 
   &__icon--solid {
     position: absolute;
-    z-index: -1;
+    color: $color-primary;
+    transform: scale(0);
+    transition: 250ms ease-in-out;
   }
 
   &__icon--regular {
-    position: absolute;
-    z-index: 1;
+    position: relative;
+    color: $black;
+    transition: 150ms ease-in-out;
   }
 
   &:hover &__icon--solid {
-    z-index: 1;
     background: linear-gradient($color-primary, $color-secondary);
+    transform: scale(1);
     -webkit-background-clip: text;
-    color: transparent;
-    animation: like__icon--solid 2s ease-out forwards;
+    -webkit-text-fill-color: transparent;
   }
 
   &:hover &__icon--regular {
-    z-index: -1;
+    opacity: 0;
+    transition: 250ms ease-in-out;
   }
 }
