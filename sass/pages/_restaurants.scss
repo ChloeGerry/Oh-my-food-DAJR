@@ -84,10 +84,15 @@
   &__title {
     font-size: 16px;
     font-weight: 300;
-    border-bottom: 3px solid $color-tertiary;
-    padding-bottom: $spacing;
-    width: 9%;
+    width: fit-content;
     margin: 0;
+  }
+
+  &__title-border {
+    display: inline-block;
+    border-bottom: 3px solid $color-tertiary;
+    padding-top: 4px;
+    width: 38px;
   }
 
   &__icon-wrapper {
@@ -100,6 +105,7 @@
 
   &__choice {
     border-radius: 20px;
+    cursor: pointer;
     background: $white;
     margin-top: $spacing * 2;
     box-shadow: 5px 5px 20px $shadow-color;
@@ -110,6 +116,11 @@
         animation-delay: 150ms * $i;
       }
     }
+  }
+
+  &__choice:hover {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__choice:hover &__icon-wrapper {
@@ -135,25 +146,10 @@
     animation: rotation 175ms 100ms;
   }
 
-  &__link {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-
-  &__link:link {
-    text-decoration: none;
-    color: $black;
-  }
-
-  &__link:visited {
-    color: $black;
-  }
-
   &__name-wrapper {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    flex-grow: 1;
     padding: $spacing * 2;
     white-space: nowrap;
     overflow: hidden;
@@ -213,16 +209,6 @@
     flex-direction: column;
     justify-content: center;
     margin-top: $spacing * 5;
-
-    &__title {
-      width: 5%;
-    }
-
-    &__choice {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
 
     &__name-wrapper {
       padding: $spacing * 2;

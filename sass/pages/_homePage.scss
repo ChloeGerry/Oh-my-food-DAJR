@@ -1,7 +1,6 @@
 .full-content {
-  margin: 0 auto;
-  max-width: 1440px;
   font-family: "Roboto", sans-serif;
+  margin: 0;
 }
 
 @keyframes hidding-homePage {
@@ -136,7 +135,7 @@
     display: flex;
     align-items: center;
     gap: 24px;
-    padding: $spacing * 3;
+    padding: $spacing * 3 $spacing * 8 $spacing * 3 $spacing * 3;
     border-radius: 20px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
     background: #f6f6f6;
@@ -190,8 +189,6 @@
 
   &__card {
     display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   &__picture-wrapper {
@@ -266,7 +263,7 @@
 
     &__navigation {
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-between;
       flex-wrap: wrap;
       margin: $spacing * 3 0 0 0;
       gap: $spacing * 4;
@@ -300,32 +297,22 @@
 
 @media screen and (min-width: 1024px) {
   .functioning {
-    padding: $spacing * 4 80px;
+    padding: $spacing * 4 180px;
 
     &__title {
       text-align: left;
     }
-
-    &__navigation {
-      justify-content: space-between;
-    }
   }
 
   .restaurants {
-    padding: $spacing * 4 100px;
+    padding: $spacing * 4 180px;
   }
 }
 
-@media screen and (min-width: 1070px) {
+@media screen and (max-width: 1365px) {
   .functioning {
-    padding: $spacing * 4 100px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .functioning {
-    &__navigation-wrapper {
-      width: calc(33% - 70px);
+    &__navigation {
+      justify-content: center;
     }
   }
 }
