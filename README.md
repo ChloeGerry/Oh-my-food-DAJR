@@ -1,6 +1,6 @@
 # Oh-my-food-DAJR
 
-  Dependancy to install :
+  Dependency to install :
   
     yarn add sass
 
