@@ -56,25 +56,13 @@
   }
 }
 
-@keyframes orderButton {
-  0% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
-}
-
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
-    transition: transform 150ms ease-in-out;
   }
 
   100% {
     transform: rotate(-180deg);
-    transition: transform 150ms ease-in-out;
   }
 }
 
@@ -96,14 +84,30 @@
   }
 
   &__icon-wrapper {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid $color-tertiary;
+    background: $color-tertiary;
+    padding: 0px;
+    border-radius: 0px 20px 20px 0px;
+    width: fit-content;
+    transform: translateX(100%);
+    transition: 250ms ease-in-out;
   }
 
   &__icon {
-    display: none;
+    position: absolute;
+    background: $white;
+    border-radius: 50%;
+    border: 6px solid $white;
+    width: 12px;
+    color: transparent;
   }
 
   &__choice {
+    display: flex;
+    justify-content: space-between;
     border-radius: 20px;
     cursor: pointer;
     background: $white;
@@ -124,18 +128,13 @@
   }
 
   &__choice:hover &__icon-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0px solid $color-tertiary;
-    background: $color-tertiary;
-    padding: 39.3px $spacing * 4;
-    border-radius: 0px 20px 20px 0px;
-    width: fit-content;
-    animation: orderButton 250ms ease-in-out;
+    transform: translateX(0%);
+    transition: 250ms ease-in-out;
+    padding: 0px $spacing * 4;
   }
 
   &__choice:hover &__icon {
+    display: initial;
     position: absolute;
     background: $white;
     border-radius: 50%;
@@ -143,7 +142,8 @@
     width: 12px;
     color: $color-tertiary;
     font-size: 12px;
-    animation: rotation 175ms 100ms;
+    animation: rotation 300ms;
+    transition: 100ms ease-in-out;
   }
 
   &__name-wrapper {
