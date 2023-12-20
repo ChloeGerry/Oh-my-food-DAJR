@@ -1,16 +1,19 @@
 .like {
-  position: relative;
   border: none;
   cursor: pointer;
   background: none;
   display: flex;
   align-items: end;
-  top: 230px;
-  right: 40px;
+  position: absolute;
+  left: 93%;
+  bottom: 8%;
+  transform: translate(-50%, -50%);
   height: fit-content;
+  width: fit-content;
 
   &__restaurant-page {
     position: initial;
+    transform: none;
   }
 
   &__icon {
@@ -47,8 +50,13 @@
   }
 }
 
-@media screen and (min-width: 769px) {
+@media (min-width: 500px) and (max-width: 767px) {
   .like {
-    top: 203px;
+    left: 95%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .like {
+    left: 95%;
   }
 }

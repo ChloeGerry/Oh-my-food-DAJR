@@ -73,18 +73,21 @@
 }
 
 .like {
-  position: relative;
   border: none;
   cursor: pointer;
   background: none;
   display: flex;
   align-items: end;
-  top: 230px;
-  right: 40px;
+  position: absolute;
+  left: 93%;
+  bottom: 8%;
+  transform: translate(-50%, -50%);
   height: fit-content;
+  width: fit-content;
 }
 .like__restaurant-page {
   position: initial;
+  transform: none;
 }
 .like__icon {
   font-size: 24px;
@@ -114,9 +117,14 @@
   transition: 250ms ease-in-out;
 }
 
-@media screen and (min-width: 769px) {
+@media (min-width: 500px) and (max-width: 767px) {
   .like {
-    top: 203px;
+    left: 95%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .like {
+    left: 95%;
   }
 }
 .footer {
@@ -362,6 +370,8 @@
 }
 .restaurants__card {
   display: flex;
+  flex-direction: column;
+  position: sticky;
 }
 .restaurants__picture-wrapper {
   display: flex;
@@ -461,7 +471,7 @@
     padding: 32px 180px;
   }
 }
-@media screen and (max-width: 1365px) {
+@media screen and (min-width: 1750px) {
   .functioning__navigation {
     justify-content: center;
   }

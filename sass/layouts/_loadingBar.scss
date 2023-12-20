@@ -18,11 +18,7 @@
   height: 5%;
   border-radius: 25px;
   transform-origin: top left;
-  background-image: linear-gradient(
-    to bottom right,
-    $color-secondary,
-    $color-primary
-  );
+  background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
   animation: home-page-animation 3000ms ease-in-out 150ms both;
   visibility: hidden;
 }
