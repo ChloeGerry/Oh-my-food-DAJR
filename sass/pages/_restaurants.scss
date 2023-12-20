@@ -56,16 +56,6 @@
   }
 }
 
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(-180deg);
-  }
-}
-
 .menu {
   margin-top: $spacing * 5;
 
@@ -89,20 +79,18 @@
     align-items: center;
     border: 0px solid $color-tertiary;
     background: $color-tertiary;
-    padding: 0px;
     border-radius: 0px 20px 20px 0px;
-    width: fit-content;
     transform: translateX(100%);
     transition: 250ms ease-in-out;
   }
 
   &__icon {
-    position: absolute;
     background: $white;
     border-radius: 50%;
     border: 6px solid $white;
     width: 12px;
-    color: transparent;
+    color: $color-tertiary;
+    font-size: 12px;
   }
 
   &__choice {
@@ -130,20 +118,7 @@
   &__choice:hover &__icon-wrapper {
     transform: translateX(0%);
     transition: 250ms ease-in-out;
-    padding: 0px $spacing * 4;
-  }
-
-  &__choice:hover &__icon {
-    display: initial;
-    position: absolute;
-    background: $white;
-    border-radius: 50%;
-    border: 6px solid $white;
-    width: 12px;
-    color: $color-tertiary;
-    font-size: 12px;
-    animation: rotation 300ms;
-    transition: 100ms ease-in-out;
+    padding: 0px $spacing * 3;
   }
 
   &__name-wrapper {
@@ -209,10 +184,6 @@
     flex-direction: column;
     justify-content: center;
     margin-top: $spacing * 5;
-
-    &__name-wrapper {
-      padding: $spacing * 2;
-    }
 
     &__name,
     &__detail {
